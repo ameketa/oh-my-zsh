@@ -14,10 +14,10 @@ GIT_CLEAN_COLOR=$FG[118]
 GIT_PROMPT_INFO=$FG[012]
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[yellow]%}"
-ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" | %{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
 
-PROMPT='%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%} %{$GIT_PROMPT_INFO%}$(git_prompt_info) | $(git_prompt_short_sha) %{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}➤%{$reset_color%} '
+PROMPT='%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%} %{$GIT_PROMPT_INFO%}$(git_prompt_info)$(git_prompt_short_sha)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}➤%{$reset_color%} '
 
 #RPS1="${return_code}"
 
